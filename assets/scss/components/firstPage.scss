@@ -6,23 +6,6 @@
     height: 50vh;
     overflow: hidden;
 
-    // .shootingStarClass {
-    //     height: 0;
-    //     width: 0;
-    //     background-color: #fff;
-    //     border-radius: 20px;
-    //     // translate: 20px 20px -150px;
-    //     animation-name: shootingStarTip;
-    //     animation-duration: 10s;
-    //     animation-iteration-count: 1;
-    //     animation-timing-function: ease-in-out;
-    // }
-
-    // @keyframes shootingStarTip {
-    //     0% { width: 400px; height: 1px; transform: translateX(0);}
-    //     100% { width: 0; height: 0; left: 60%;}
-    // }
-
     .starImg {
         opacity: 0;
     }
@@ -58,7 +41,7 @@
     // }
 
     .welcomeBox {
-        animation: welcome 3s ease-in 4s 1 forwards;
+        animation: welcome 3s ease-in 3s 1 forwards;
         background-color: rgb(56, 64, 95, 0);
         box-shadow: 0 0 5px 10px rgb(56, 64, 95, 0);
         @include Header1;
@@ -108,7 +91,7 @@
     }
 
     .moveBtnDown {
-        animation: nextSectionPointer 2s ease-in 5s 1 forwards;
+        animation: nextSectionPointer 2s ease-in 4s 1 forwards;
         left: 47vw;
         opacity: 0;
         position: relative;
@@ -200,23 +183,6 @@
             100% {
                 rotate: -90deg;
             }
-            // 0% {
-            //     border-left: 50px solid transparent;
-            //     border-right: 50px solid transparent;
-            //     border-top: 50px solid rgb(255, 0, 53, 0.5);
-            // } 
-
-            // 1% {
-            //     border-bottom: 50px solid transparent;
-            //     border-top: 50px solid transparent;
-            //     border-left: 50px solid rgb(255, 0, 53, 0.5);
-            // }
-
-            // 100% {
-            //     border-bottom: 50px solid transparent;
-            //     border-top: 50px solid transparent;
-            //     border-left: 50px solid rgb(255, 0, 53, 0.5);
-            // }
         }
 
     }
