@@ -1,0 +1,7 @@
+.DS_Store
+node_modules
+2019-2021Projects
+2021-2023Projects
+.htaccess
+docker-compose.yml
+classes/connect/*

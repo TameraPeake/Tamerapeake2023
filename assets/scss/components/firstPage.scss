@@ -1,0 +1,355 @@
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.homeBody {
+    background-color: #0E131F;
+    height: 50vh;
+    overflow: hidden;
+
+    // .shootingStarClass {
+    //     height: 0;
+    //     width: 0;
+    //     background-color: #fff;
+    //     border-radius: 20px;
+    //     // translate: 20px 20px -150px;
+    //     animation-name: shootingStarTip;
+    //     animation-duration: 10s;
+    //     animation-iteration-count: 1;
+    //     animation-timing-function: ease-in-out;
+    // }
+
+    // @keyframes shootingStarTip {
+    //     0% { width: 400px; height: 1px; transform: translateX(0);}
+    //     100% { width: 0; height: 0; left: 60%;}
+    // }
+
+    .starImg {
+        opacity: 0;
+    }
+
+    .nineStarShine, .sevenStarShine, .fiveStarShine, .twoStarShine {
+        @include keyframes(shine) {
+            0% { opacity: 0;}
+            50% { opacity: 1;}
+            100% { opacity: 0;}
+        }
+    }
+
+    
+    .nineStarShine {
+        @include animate(shine, 5s, infinite, ease, 5s);
+    }
+
+    .sevenStarShine {
+        @include animate(shine, 7s, infinite, ease, 6s);
+    }
+
+    .fiveStarShine {
+        @include animate(shine, 4s, infinite, ease, 8s); 
+    }
+
+    .twoStarShine {
+        @include animate(shine, 6s, infinite, ease, 7s);
+    }
+
+    // .welcomeContainer {
+    //     height: 100vh;
+    //     width: 100vw;
+    // }
+
+    .welcomeBox {
+        animation: welcome 3s ease-in 7s 1 forwards;
+        background-color: rgb(56, 64, 95, 0);
+        box-shadow: 0 0 5px 10px rgb(56, 64, 95, 0);
+        @include Header1;
+        left: 30%;
+        padding: 2%;
+        position: absolute;
+        text-align: center;
+        top: 30%;
+
+        .intro1, .intro2, .intro3 {
+            opacity: 0;
+            @include keyframes(welcomeText) {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 100%;
+                }
+            }
+        }
+
+        .intro1 {
+            @include animateAllButStars(welcomeText, 2s, ease-in, 1s, 1, forwards)
+        }
+
+        .intro2 {
+            @include animateAllButStars(welcomeText, 2s, ease-in, 2s, 1, forwards)
+        }
+
+        .intro3 {
+            @include animateAllButStars(welcomeText, 2s, ease-in, 3s, 1, forwards)
+        }
+    }
+    
+
+    @keyframes welcome {
+        0% {
+            background-color: rgb(56, 64, 95, 0);
+            box-shadow: 0 0 5px 10px rgb(56, 64, 95, 0);
+        }
+
+        100% {
+            background-color: rgb(56, 64, 95, 0.7);
+            box-shadow: 0 0 5px 10px rgb(56, 64, 95, 0.7);
+        }
+    }
+
+    .moveBtnDown {
+        animation: nextSectionPointer 2s ease-in 9s 1 forwards;
+        left: 47vw;
+        opacity: 0;
+        position: relative;
+        top: 50vh;
+
+        @keyframes nextSectionPointer {
+            0% {
+                opacity: 0;
+                top: 50vh;
+            }
+    
+            70% {
+                opacity: 0;
+                top: 70vh;
+            }
+    
+            100% {
+                opacity: 1;
+                top: 80vh;
+            }
+        }
+
+        .goToContentBtnFalse {
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 50px solid rgb(255, 0, 53, 0.5);
+            height: 0;
+            width: 0;
+        }
+
+        .goToContentBtnFalse:hover {
+            animation: goToButtonHover 1s ease-in-out 1 both;
+        }
+
+        @keyframes goToButtonHover {
+            0% {
+                flex-grow: 1;
+            }
+            100% {
+                flex-grow: 3;
+            }
+        }
+
+
+    }
+
+    .moveBtnLeft {
+        animation: nextSectionShow 1.8s ease-in 1s 1 forwards;
+        left: 47vw;
+        position: relative;
+        top: 80vh;
+
+        @keyframes nextSectionShow {
+            0% {
+                opacity: 1;
+                left: 47vw;
+            }
+
+            20% {
+                opacity: 1;
+                left: 47vw;
+            }
+
+            99% {
+                opacity: 1;
+                left: -10px;
+            }
+            100% {
+                opacity: 0;
+                left: -10px;
+                display: none;
+            }
+        }
+
+        .goToContentBtnTrue {
+            animation: rotateGoToBtn 1s ease-out forwards;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 50px solid rgb(255, 0, 53, 0.5);
+            height: 0;
+            width: 0;
+        }
+
+        @keyframes rotateGoToBtn {
+            0%{
+                rotate: 0;
+            }
+
+            100% {
+                rotate: -90deg;
+            }
+            // 0% {
+            //     border-left: 50px solid transparent;
+            //     border-right: 50px solid transparent;
+            //     border-top: 50px solid rgb(255, 0, 53, 0.5);
+            // } 
+
+            // 1% {
+            //     border-bottom: 50px solid transparent;
+            //     border-top: 50px solid transparent;
+            //     border-left: 50px solid rgb(255, 0, 53, 0.5);
+            // }
+
+            // 100% {
+            //     border-bottom: 50px solid transparent;
+            //     border-top: 50px solid transparent;
+            //     border-left: 50px solid rgb(255, 0, 53, 0.5);
+            // }
+        }
+
+    }
+
+    .contentContainerHide {
+        display: none;
+    }
+
+    .contentContainerShowDouble {
+        visibility: hidden !important;
+    }
+
+    .contentContainerShow {
+        animation: showMajorChoices 1.8s ease-in 1s forwards;
+        background-color: rgb(56, 64, 95, 0.7);
+        box-shadow: 0 0 5px 10px rgb(56, 64, 95, 0.7);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 10%;
+        position: absolute;
+        top: 80vh;
+        left: 0;
+        opacity: 0;
+        width: 80%;
+
+        .majorChoiceContainer {
+            // border: 5px solid #ff0035;
+            // padding: 10px;
+            .majorChoices {
+                @include Header2;
+                padding: 15px 20px;
+            }
+
+            .majorChoices:hover {
+                color:#ff0035;
+            }
+        }
+    }
+
+    @keyframes showMajorChoices {
+        0% {
+            opacity: 0;
+            left: 100% ;
+        }
+
+        100% {
+            opacity: 1;
+            left: 0;
+        }
+    }
+
+    .resultContainer {
+        // animation: welcome 3s ease-in 7s 1 forwards;
+        background-color: rgba(56,64,95,.7);
+        box-shadow: 0 0 5px 10px rgba(56,64,95,.7);
+        // height: 100%;
+        margin: 20px;
+        padding: 2%;
+        position: absolute;
+        text-align: center;
+        top: 20px;
+        width: 97vw;
+        @include Header1Two;
+
+        .minorBtns {
+            color:#ff0035;
+        }
+
+        .minorBtns:hover {
+            color:#fff;
+        }
+    }
+
+}
+
+.outProjectContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+
+    h2 {
+        font-size: 20px;
+        padding-bottom: 5%;
+    }
+
+    h3 {
+        font-size: 18px;
+        padding-bottom: 5%;
+    }
+
+    .projectLinks {
+        padding: 5%;
+
+        a {
+            color:#ff0035;
+        }
+
+        a:hover {
+            color:#fff;
+        }
+    }
+
+
+    .projectSide {
+        padding: 0 10px;
+        width: 50%;
+
+        .miniImgContainer{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            .projectMiniImg {
+                padding: 3% 3% 3% 0;
+                width: 150px;
+            }
+        }
+    }
+    
+    .projectImg {
+        width: 500px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}
+
+.removeOverflow { 
+    overflow-y: auto !important;
+}

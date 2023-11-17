@@ -1,0 +1,43 @@
+//Homepage - stars
+@mixin animate($animation, $animation-duration, $animation-iteration-count,$animation-timing-function, $animation-delay){
+    animation: $animation $animation-duration $animation-iteration-count $animation-timing-function $animation-delay;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+//Homepage - welcome - created a different one to address the timing function. will probably use for all animaitons besides the stars
+@mixin animateAllButStars($animation, $animation-duration, $animation-timing,$animation-delay, $animation-iteration-count,$animation-timing-function){
+    animation: $animation $animation-duration $animation-timing $animation-delay $animation-iteration-count $animation-timing-function;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+
+
+//header styling
+
+@mixin Header1 {
+    color: #fff;
+    font-family: $merriweatherFont;
+    font-size: 42px;
+}
+
+@mixin Header1Two {
+    color: #fff;
+    font-family: $merriweatherFont;
+    font-size: 28px;
+}
+
+@mixin Header2 {
+    color: #fff;
+    font-family: $merriweatherFont;
+    font-size: 24px;
+}
