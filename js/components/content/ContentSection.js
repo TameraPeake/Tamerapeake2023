@@ -17,19 +17,13 @@ export default {
             majorChoices: {
                     0: 'Finished Projects',
                     1: 'Current Projects',
-                    2: 'About Me',
-                    3: 'Resume'
+                    // 2: 'About Me',
+                    2: 'Resume'
             },
             hoverMajorChoice: ''
         }
     },
-    // watch: {
-    //     'showContentContainer': function() {
-    //         if(this.showContentContainer) {
-    //             this.outputMajorChoices();
-    //         }
-    //     }
-    // },
+
     methods: {
         chooseMajorChoice(mChoices) {
             this.$emit('choice', mChoices, 'majorChioce');

@@ -52,10 +52,5 @@ export default {
             console.log(mainNavStatus);
         }
 
-        // clearChoiceArray(clearChoiceArray) {
-        //     if(clearChoiceArray) {
-        //         this.choiceResults = [];
-        //     }
-        // }
     }
 }
