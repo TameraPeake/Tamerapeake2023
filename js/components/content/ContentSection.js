@@ -3,7 +3,7 @@ export default {
         <div :class="[showContentContainer ? 'contentContainerShow' : 'contentContainerHide', sendMinorContentStatus ? '' : 'contentContainerShowDouble' ]">
             <div v-for="mChoices in majorChoices" class="majorChoiceContainer">
                 <span v-if="mChoices == 'Resume'">                
-                    <a href="test" target="_blank" class="majorChoices">{{ mChoices }}</a>
+                    <a href="/assets/TameraPeakeResume2023.pdf" target="_blank" class="majorChoices">{{ mChoices }}</a>
                 </span>
                 <span v-else>
                     <button @click="chooseMajorChoice(mChoices)" class="majorChoices">{{ mChoices }}</button>
