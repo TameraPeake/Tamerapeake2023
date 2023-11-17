@@ -11,7 +11,7 @@ export default {
                     <div v-for="images in imageArry">
                         <button @click="chooseImg(images)">
                             <img :src="images" class="projectMiniImg">
-                        </button>
+                        </button> 
                     </div>
                 </div>
             </div>
