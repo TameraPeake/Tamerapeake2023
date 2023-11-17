@@ -20,19 +20,19 @@
 
     
     .nineStarShine {
-        @include animate(shine, 5s, infinite, ease, 5s);
+        @include animate(shine, 5s, infinite, ease, 2s);
     }
 
     .sevenStarShine {
-        @include animate(shine, 7s, infinite, ease, 6s);
+        @include animate(shine, 7s, infinite, ease, 3s);
     }
 
     .fiveStarShine {
-        @include animate(shine, 4s, infinite, ease, 8s); 
+        @include animate(shine, 4s, infinite, ease, 5s); 
     }
 
     .twoStarShine {
-        @include animate(shine, 6s, infinite, ease, 7s);
+        @include animate(shine, 6s, infinite, ease, 4s);
     }
 
     // .welcomeContainer {
@@ -91,7 +91,7 @@
     }
 
     .moveBtnDown {
-        animation: nextSectionPointer 1.8s ease-in 2s 1 forwards;
+        animation: nextSectionPointer 1.8s ease-in 1s 1 forwards;
         left: 47vw;
         opacity: 0;
         position: relative;
