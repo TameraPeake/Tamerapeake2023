@@ -30,22 +30,10 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
+const tailwind = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 
-
-//newest way to write gulp function as of 2022
-// function taskName(cb) {
-//     cb(new Error('Something bad has happened'));
-// }
-
-// function generateCSS(cb) {
-//     src('./sass/**/*.scss')
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(dest('public/stylesheets'));
-//     cb();
-// }
-
-// exports.css = generateCSS;
 
 
 function compileJs() {
@@ -65,6 +53,10 @@ function compileScss() {
         .pipe(dest('assets/dist/css/'))
         .pipe(rename('styles.css'))
         .pipe(dest('assets/dist/css/'))
+}
+ 
+function compileTailwind() {
+    
 }
 
 function watchScss() {
